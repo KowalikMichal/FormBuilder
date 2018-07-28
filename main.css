@@ -1,0 +1,126 @@
+html{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 1vh;
+	font-family: sans-serif;
+	background:
+	linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+	linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+	background-color:#708090;
+	background-size: 64px 128px;
+}
+
+input.visited:required:not(:valid){
+	border: 1px solid red;
+}
+
+input:required:valid{
+	transition: border-color 200ms;
+	border: 1px solid green;
+}
+
+select:optional{
+	border: 1px solid #ccc;   
+}
+
+select.selectBool{
+	width: 40px;
+}
+
+input{
+	width: 100%;
+}
+
+.form{
+	padding: 1vh;
+	height: 120px;
+	width: 280px;
+	margin-bottom: 1vh;
+	background: white;
+	z-index: 1;
+	box-shadow:0 0 5px 5px rgba(0,0,0,0.1);
+	border-radius: 10px;
+}
+
+.row{
+	display: flex;
+	align-items: left;
+	margin: 1vh;
+}
+
+.left{
+	flex-grow: 1;
+	margin-left: 1vh;
+}
+
+.right{
+	flex-grow: 1;
+	margin-left: 1vh;
+}
+
+.rowButton{
+	margin: 0 1vh 0 2vh;
+	display: flex;
+	align-items: right;
+	justify-content: space-between;
+  	align-content: flex-end; 
+}
+
+.AddInput{
+	margin: 1vh;
+	position: fixed;
+	bottom: 0;
+	right:  0;
+}
+
+.Question > .Question{
+	margin: 1vh;
+}
+
+.wrong{
+	border: 1px solid red;
+}
+
+.button-circle{
+	text-align: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	display: inline-block;
+	font-size: 20px;
+	vertical-align: middle;
+	font-weight: bold;
+	border: 1.5px #3e5e9a;
+	border-style: solid;
+	z-index: 1;
+}
+
+.button-circle:focus,.addSubInput:focus,.delete:focus{
+	outline:0;
+}
+
+.button{
+	color: white;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 2px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.addSubInput{
+	background: #47c9a2;
+}
+
+.delete{
+	background: #e85e6c;
+}
+
+.addSubInput:hover, .delete:hover, .button-circle:hover{
+	box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.5);
+}
